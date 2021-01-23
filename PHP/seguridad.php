@@ -6,6 +6,17 @@
      return preg_match( "/[\r\n]/", $str );
    }
 
+// check for  lack of integrity 
+function noIntegridad( $str )
+ {
+  if( ctype_space($str)||!isset($str)||has_injection($str)||empty($str))
+  {
+    return true;
+  } else  {
+    return false;
+  }
+}
+
 // esta funcion ejecuta codigo sql seguro y tiene un si6tnaxis aprecida a nodejs
 function secureSQL($hook , $sql, $arr )
 {   
