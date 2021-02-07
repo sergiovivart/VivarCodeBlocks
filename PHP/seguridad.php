@@ -1,10 +1,10 @@
 
 <?php 
 
-   // Check for Header Injections
-   function has_header_injection($str) {
-     return preg_match( "/[\r\n]/", $str );
-   }
+// Check for Header Injections
+function has_header_injection($str) {
+  return preg_match( "/[\r\n]/", $str );
+}
 
 // check for  lack of integrity 
 function noIntegridad( $str )
